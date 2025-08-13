@@ -1,8 +1,8 @@
-# 🚀 Rocketium Canvas Tool
+# 🚀 Canvas Tool
 
 Welcome to **Rocketium Canvas**, a simple yet powerful browser-based drawing tool! Create shapes, add text, upload images, move them around, and export your masterpiece as a PDF—all in your browser.  
 
-Check out the live version here: [Rocketium Canvas Live](https://canvas-mlxg.onrender.com/)  
+Check out the live version here: [Canvas Live](https://canvas-mlxg.onrender.com/)  
 Source code: [GitHub Repository](https://github.com/ehhteshaam/canvas)
 
 ---
