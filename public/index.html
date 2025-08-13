@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocketium Canvas Tool</title>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Vanilla Picker for color selection -->
+  <script src="https://unpkg.com/vanilla-picker@2"></script>
+
+  <!-- jsPDF for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- =======================
+       HEADER
+       ======================= -->
+  <header>
+    <!-- Company logo -->
+    <img src="icons/Rocketium.png" alt="Rocketium" class="logo">
+    <!-- App title -->
+    <h1>Rocketium Canvas</h1>
+  </header>
+
+  <!-- =======================
+       TOOLBAR
+       ======================= -->
+  <div class="toolbar">
+    <!-- Drawing tools -->
+    <button id="rectBtn" title="Rectangle">
+      <img src="icons/rectangle.png" alt="Rectangle">
+    </button>
+    <button id="circleBtn" title="Circle">
+      <img src="icons/oval.png" alt="Circle">
+    </button>
+    <button id="lineBtn" title="Line">
+      <img src="icons/minus.png" alt="Line">
+    </button>
+    <button id="textBtn" title="Text">
+      <img src="icons/text-format.png" alt="Text">
+    </button>
+    <button id="imageBtn" title="Upload Image">
+      <img src="icons/file.png" alt="Upload">
+    </button>
+
+    <!-- Color picker -->
+    <label id="colorPickerBtn" class="color-picker-btn" title="Border Color">
+      <img src="icons/colour.png" alt="Color">
+    </label>
+
+    <!-- Undo/Redo -->
+    <button id="undoBtn" title="Undo">
+      <img src="icons/undo.png" alt="Undo">
+    </button>
+    <button id="redoBtn" title="Redo">
+      <img src="icons/redo.png" alt="Redo">
+    </button>
+
+    <!-- Clear canvas -->
+    <button id="clearCanvasBtn" title="Clear Canvas">Clear Canvas</button>
+
+    <!-- Canvas size inputs -->
+    <input type="number" id="canvasWidthInput" placeholder="Width" style="width:80px">
+    <input type="number" id="canvasHeightInput" placeholder="Height" style="width:80px">
+    <button id="setCanvasSizeBtn">Set Size</button>
+
+    <!-- Download PDF -->
+    <button id="downloadPdfBtn" title="Download PDF">
+      <img src="icons/download-pdf.png" alt="Download PDF">
+    </button>
+  </div>
+
+  <!-- =======================
+       IMAGE UPLOAD MODAL
+       ======================= -->
+  <div id="imageUploadModal" class="image-upload-modal" style="display:none;">
+    <button id="uploadLocalBtn">Upload Local File</button>
+    <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+    <input type="text" id="imageUrlInput" placeholder="Enter Image URL">
+    <button id="uploadUrlBtn">Upload URL</button>
+    <button id="closeModalBtn">Close</button>
+  </div>
+
+  <!-- =======================
+       MAIN CONTENT
+       ======================= -->
+  <main>
+    <!-- Canvas container -->
+    <div class="canvas-container">
+      <canvas id="drawingCanvas" width="800" height="500"></canvas>
+    </div>
+  </main>
+
+  <!-- =======================
+       JAVASCRIPT
+       ======================= -->
+  <script src="script.js"></script>
+</body>
+</html>

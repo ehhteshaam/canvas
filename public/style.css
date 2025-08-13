@@ -1,0 +1,156 @@
+/* ===========================================
+   GLOBAL STYLES
+   =========================================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #1e1e2a;           /* Dark background for the app */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #e0e0e8;                /* Light text color */
+}
+
+/* ===========================================
+   HEADER
+   =========================================== */
+header {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;                     /* Space between logo and title */
+  padding: 12px 20px;
+  background: #2a2a3d;           /* Slightly lighter dark background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  width: 100%;
+  justify-content: center;
+}
+
+/* Logo inside header */
+.logo {
+  height: 36px;
+}
+
+/* Header text */
+header span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* ===========================================
+   TOOLBAR
+   =========================================== */
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: #2a2a3d;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+/* Toolbar buttons & color picker */
+.toolbar button,
+.color-picker-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* Icons in toolbar buttons */
+.toolbar img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);          /* Makes dark icons visible on dark background */
+}
+
+/* Hover effect for toolbar buttons */
+.toolbar button:hover,
+.color-picker-btn:hover {
+  background: #00ff9e;           /* Neon green hover */
+  border-radius: 4px;
+}
+
+/* ===========================================
+   CANVAS CONTAINER
+   =========================================== */
+.canvas-container {
+  border: 2px solid white;
+  background: white;
+  resize: both;                  /* Allow user to resize container */
+  overflow: hidden;              /* Keep canvas inside container */
+  width: 80vw;
+  height: 60vh;
+  padding: 5px;
+  display: flex;
+}
+
+/* Actual canvas element */
+canvas {
+  background: white;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===========================================
+   CANVAS SIZE CONTROLS
+   =========================================== */
+.canvas-size-controls {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.canvas-size-controls input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Buttons for setting size & clearing canvas */
+#setCanvasSizeBtn,
+#clearCanvasBtn {
+  color: #ffffff;               /* White text on dark toolbar */
+}
+
+/* ===========================================
+   IMAGE UPLOAD MODAL
+   =========================================== */
+.image-upload-modal {
+  position: absolute;
+  background: #2a2a3d;          /* Dark modal background */
+  border: 2px solid #00ff9e;    /* Neon green border */
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1000;                /* Ensure modal is on top */
+}
+
+/* Input fields inside modal */
+.image-upload-modal input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #00ff9e;   /* Neon border */
+  color: #fff;                  /* Light text color */
+  background: #1e1e2a;          /* Match body background */
+}
+
+/* Buttons inside modal */
+.image-upload-modal button {
+  background: #00ff9e;          /* Neon green */
+  color: #000;                  /* Black text */
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for modal buttons */
+.image-upload-modal button:hover {
+  background: #00cc7a;          /* Darker green hover */
+}
