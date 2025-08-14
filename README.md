@@ -13,16 +13,15 @@ A full-stack web application that provides a professional canvas design tool wit
 - **Shapes**: Rectangle, Circle, Line
 - **Text**: Add custom text with adjustable font sizes
 - **Images**: Upload local files or add images from URLs
-- **Color Control**: Separate stroke and fill color pickers
+- **Color Control**: Custom border color picker
 
 ### 📁 Export Capabilities
 - **PDF Export**: High-quality PDF with compression optimization
-- **Image Export**: JPEG format with quality settings
-- **Server-side Rendering**: Uses Node.js canvas library for consistent output
+- **Server-side Rendering**: Uses PDFKit for consistent output
 
 ### 🔧 Advanced Features
 - **Undo/Redo**: Full history management
-- **Element Management**: Add, remove, and modify canvas elements
+- **Element Management**: Add and modify canvas elements
 - **Image Caching**: Optimized image loading and storage
 - **Error Handling**: Graceful fallbacks for failed operations
 
@@ -37,12 +36,10 @@ A full-stack web application that provides a professional canvas design tool wit
 ### Backend
 - **Node.js**: Server-side JavaScript runtime
 - **Express.js**: Web application framework
-- **Canvas Library**: Server-side image processing
 - **PDFKit**: PDF generation with optimization
 
 ### Libraries & Dependencies
 - **Vanilla Picker**: Color selection component
-- **jsPDF**: Client-side PDF generation (fallback)
 - **Body Parser**: Request body parsing
 - **CORS**: Cross-origin resource sharing
 
@@ -54,8 +51,8 @@ A full-stack web application that provides a professional canvas design tool wit
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repo-url>
-cd canvas-builder-api
+git clone https://github.com/ehhteshaam/canvas.git
+cd canvas
 ```
 
 ### 2. Install Dependencies
@@ -103,8 +100,7 @@ Content-Type: application/json
   "y": 100,
   "w": 200,
   "h": 150,
-  "strokeColor": "#000000",
-  "fillColor": "#ff0000"
+  "strokeColor": "#000000"
 }
 ```
 
@@ -130,11 +126,6 @@ POST /api/canvas/clear
 POST /api/canvas/export-pdf
 ```
 
-#### Export as Image
-```http
-GET /api/canvas/export-image
-```
-
 ## 🎨 Usage Guide
 
 ### 1. Setting Up Your Canvas
@@ -143,7 +134,7 @@ GET /api/canvas/export-image
 
 ### 2. Drawing Elements
 - **Select a Tool**: Click on rectangle, circle, line, text, or image
-- **Choose Colors**: Use stroke and fill color pickers
+- **Choose Colors**: Use the color picker for border colors
 - **Draw**: Click and drag on the canvas to create elements
 
 ### 3. Adding Text
@@ -158,7 +149,6 @@ GET /api/canvas/export-image
 
 ### 5. Exporting Your Design
 - **PDF Export**: Click the PDF button for high-quality PDF download
-- **Image Export**: Click the Image button for JPEG download
 
 ## 🔧 Configuration
 
@@ -171,7 +161,7 @@ NODE_ENV=production         # Environment mode
 ### Canvas Settings
 - **Maximum Size**: 2000×2000 pixels
 - **Default Size**: 800×500 pixels
-- **Supported Formats**: JPEG for images, PDF for documents
+- **Supported Formats**: PDF for documents
 
 ## 📱 Browser Support
 
@@ -258,4 +248,4 @@ For questions or support:
 
 ---
 
-**Built with ❤️ using modern web technologies** 
+**Built with ❤️ using modern web technologies**
