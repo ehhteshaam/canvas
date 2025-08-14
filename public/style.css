@@ -115,6 +115,9 @@ canvas {
 #clearCanvasBtn {
   color: #ffffff;               /* White text on dark toolbar */
 }
+#initCanvasBtn{
+  color: #ffffff;
+}
 
 /* ===========================================
    IMAGE UPLOAD MODAL

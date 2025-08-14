@@ -1,21 +1,38 @@
 {
-  "name": "notes",
+  "name": "canvas-builder-api",
   "version": "1.0.0",
+  "description": "Professional Canvas Builder API with PDF Export functionality",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "echo 'No build step required for Node.js app'",
+    "deploy": "vercel --prod",
+    "test": "echo 'No tests specified'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "canvas",
+    "pdf",
+    "drawing",
+    "design",
+    "api",
+    "express",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
+    "axios": "^1.11.0",
     "body-parser": "^2.2.0",
     "canvas": "^3.1.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "multer": "^2.0.2",
-    "pdfkit": "^0.17.1",
-    "sharp": "^0.34.3"
+    "pdfkit": "^0.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
