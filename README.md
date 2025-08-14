@@ -170,19 +170,7 @@ NODE_ENV=production         # Environment mode
 - **Safari**: 12+
 - **Edge**: 79+
 
-## 🚀 Deployment
 
-### Vercel Deployment
-
-1. **Install Vercel CLI**
-```bash
-npm i -g vercel
-```
-
-2. **Deploy**
-```bash
-vercel
-```
 
 3. **Environment Setup**
 - Set `NODE_ENV=production`
@@ -239,13 +227,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Vanilla Picker**: For color selection
 - **Express.js**: For the web framework
 
-## 📞 Support
-
-For questions or support:
-- Create an issue in the repository
-- Contact the development team
-- Check the documentation
-
----
-
-**Built with ❤️ using modern web technologies**
